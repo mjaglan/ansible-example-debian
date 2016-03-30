@@ -1,0 +1,9 @@
+---
+# tasks file for nginx
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=86400
+- name: nginx installation
+  apt: 
+    name: "{{package_name}}"
+    state: installed
+
